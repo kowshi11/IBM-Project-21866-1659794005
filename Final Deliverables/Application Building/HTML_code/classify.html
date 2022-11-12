@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 90%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("image1.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 150%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+img{
+  max-width:180px;
+}
+input[type=file]{
+padding:10px;
+background:#2d2d2d;
+}
+</style>
+</head>
+<body>
+<h3 align="center">Show a file-select field which allows only one file to be chosen:</h3>
+
+  <label for="myfile">Select a file:</label>
+ <input type='file' onchange="readURL(this);"/>
+<img id="blah" src="upload.js" alt="your image" />
+<div class="bg-image"></div>
+</body>
+</html>
+
+<form align="center" action="/action_page.php">
+ <input type="file" id="myfile" name="myfile"><br><br>
+  
+<button><a href="submit.html" input type="submit">submit</a></button>
